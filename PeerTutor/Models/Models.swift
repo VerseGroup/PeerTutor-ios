@@ -13,10 +13,11 @@ struct User: Codable, Identifiable {
     let id: Int
     let username: String
     let email: String
-    let phone: Int
     let permission: Int
     let grade: Int
     let joinDate: Date
+    
+    let gradeLevels: [Int]
     
     let frees: [String]
     
