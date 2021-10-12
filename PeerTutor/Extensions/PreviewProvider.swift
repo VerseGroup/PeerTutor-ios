@@ -29,6 +29,9 @@ class DeveloperPreview {
     let match1: Match
     let match2: Match
     
+    let matchRequest1: MatchRequest
+    let matchRequest2: MatchRequest
+    
     let mathCourse = Course(id: 1, name: "AP Calculus AB/BC", description: "Do you enjoy having 2 hours of homework for a single class every night? If so, this course is the perfect course for you!")
     let englishCourse = Course(id: 2, name: "English 11", description: "Let's see if we can wheelspoke this...")
     let csCourse = Course(id: 3, name: "AP Computer Science A", description: "Learn how to become a living, breathing Java compiler in AP CSA")
@@ -62,5 +65,8 @@ class DeveloperPreview {
         
         match1 = Match(id: 1, tutor: user1, tutee: user2, course: csCourse, period: Period.d3p7)
         match2 = Match(id: 2, tutor: user3, tutee: user1, course: chineseCourse, period: Period.d7p3)
+        
+        matchRequest1 = MatchRequest(id: 1, user: user1, course: englishCourse, teaches: true)
+        matchRequest2 = MatchRequest(id: 2, user: user2, course: englishCourse, teaches: false)
     }
 }
