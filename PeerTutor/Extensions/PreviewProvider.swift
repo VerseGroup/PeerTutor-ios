@@ -20,6 +20,8 @@ class DeveloperPreview {
     
     static let instance = DeveloperPreview()
     
+    let homeVM = HomeViewModel()
+    
     let user1: User
     let user2: User
     let user3: User
