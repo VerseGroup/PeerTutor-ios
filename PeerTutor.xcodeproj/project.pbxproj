@@ -20,6 +20,7 @@
 		166B76852715128C00A42930 /* LearnRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76842715128C00A42930 /* LearnRowView.swift */; };
 		166B76872715129500A42930 /* TeachRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76862715129500A42930 /* TeachRowView.swift */; };
 		166B76892715162300A42930 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76882715162300A42930 /* HomeViewModel.swift */; };
+		166B76922715226800A42930 /* MatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76912715226800A42930 /* MatchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		166B76842715128C00A42930 /* LearnRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnRowView.swift; sourceTree = "<group>"; };
 		166B76862715129500A42930 /* TeachRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachRowView.swift; sourceTree = "<group>"; };
 		166B76882715162300A42930 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		166B76912715226800A42930 /* MatchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				166B76762715009A00A42930 /* User.swift */,
 				166B767A271500BD00A42930 /* Match.swift */,
+				166B76912715226800A42930 /* MatchRequest.swift */,
 				166B7678271500AA00A42930 /* Course.swift */,
 				166B767D2715032400A42930 /* Period.swift */,
 			);
@@ -106,6 +109,7 @@
 		16223FBD2710D3DE004D27D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				166B768A271519E600A42930 /* Components */,
 				166B767F2715117A00A42930 /* HomeView.swift */,
 				166B76842715128C00A42930 /* LearnRowView.swift */,
 				166B76862715129500A42930 /* TeachRowView.swift */,
@@ -134,6 +138,13 @@
 				166B76742715008B00A42930 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		166B768A271519E600A42930 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166B76922715226800A42930 /* MatchRequest.swift in Sources */,
 				166B7679271500AA00A42930 /* Course.swift in Sources */,
 				166B76892715162300A42930 /* HomeViewModel.swift in Sources */,
 				166B76752715008B00A42930 /* PreviewProvider.swift in Sources */,

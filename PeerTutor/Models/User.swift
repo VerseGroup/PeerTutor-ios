@@ -18,10 +18,4 @@ struct User: Codable, Identifiable {
     let gradeLevels: [Int]
     
     let frees: [Period]
-    
-    // possibly make teaches and learns the Match id?
-    /*
-     let teaches: [Match]
-     let learns: [Match]
-     */
 }

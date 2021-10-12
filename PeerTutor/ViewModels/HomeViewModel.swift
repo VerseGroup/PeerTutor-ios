@@ -50,6 +50,8 @@ class HomeViewModel: ObservableObject {
         let match2: Match = Match(id: 2, tutor: user3, tutee: user1, course: chineseCourse, period: Period.d7p3)
         
         teachMatches.append(match1)
+        teachMatches.append(match2)
+        learnMatches.append(match1)
         learnMatches.append(match2)
     }
 }

@@ -10,15 +10,12 @@ import SwiftUI
 struct LearnRowView: View {
     
     var match: Match
-    var isPending: Bool {
-        return match.tutor == nil
-    }
 
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text("Your tutor:")
-                Text(match.tutor?.username ?? "")
+                Text(match.tutor.username)
                     .font(.title2)
                     .fontWeight(.semibold)
             }

@@ -9,8 +9,8 @@ import Foundation
 
 struct Match: Codable, Identifiable {
     let id: Int
-    let tutor: User?
-    let tutee: User?
+    let tutor: User
+    let tutee: User
     let course: Course
     let period: Period
 }

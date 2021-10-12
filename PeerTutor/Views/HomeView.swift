@@ -18,9 +18,17 @@ struct HomeView: View {
             VStack {
                 Text("Your upcoming learning sessions")
                 List {
-                    ForEach(vm.learnMatches) { match in
-                        LearnRowView(match: match)
+                    Section(header: Text("Your upcoming learning sessions")) {
+                        ForEach(vm.learnMatches) { match in
+                            LearnRowView(match: match)
+                        }
                     }
+
+                    Section(header: Text("Your pending match requests")) {
+                        
+                    }
+                    // ForEach()
+                    // add your pending match request
                 }
                 .listStyle(PlainListStyle())
             }
