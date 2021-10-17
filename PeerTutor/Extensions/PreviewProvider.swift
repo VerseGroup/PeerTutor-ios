@@ -43,24 +43,21 @@ class DeveloperPreview {
                      email: "pevans@students.hackleyschool.org",
                      permission: 1,
                      grade: 11,
-                     joinDate: Date(),
-                     gradeLevels: [9, 10, 11, 12],
+                     joinDate: "Sat, 16 Oct 2021 22:01:38 GMT",
                      frees: [Period.d1p3, Period.d2p4, Period.d3p7, Period.d4p3, Period.d5p7, Period.d6p1, Period.d6p7, Period.d7p2])
         user2 = User(id: 2,
                      username: "MalcolmKrolick",
                      email: "mkrolick@students.hackleyschool.org",
                      permission: 1,
                      grade: 11,
-                     joinDate: Date(),
-                     gradeLevels: [9, 10, 11, 12],
+                     joinDate: "Sat, 16 Oct 2021 22:01:38 GMT",
                      frees: [Period.d1p7, Period.d7p3, Period.d3p7])
         user3 = User(id: 3,
                      username: "StevenYu",
                      email: "syu@students.hackleyschool.org",
                      permission: 1,
                      grade: 11,
-                     joinDate: Date(),
-                     gradeLevels: [9, 10, 11, 12],
+                     joinDate: "Sat, 16 Oct 2021 22:01:38 GMT",
                      frees: [Period.d1p3, Period.d3p7, Period.d4p3, Period.d5p7, Period.d6p1, Period.d6p7, Period.d7p2, Period.d7p3])
         
         match1 = Match(id: 1, tutor: user1, tutee: user2, course: csCourse, period: Period.d3p7)
