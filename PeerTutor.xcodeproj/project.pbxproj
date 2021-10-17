@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		16B1C7BF271CB884008B34A3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1C7BE271CB884008B34A3 /* HomeViewModel.swift */; };
 		16B1C7C2271CBB38008B34A3 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1C7C1271CBB38008B34A3 /* LogoView.swift */; };
 		16B1C7C4271CC01E008B34A3 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1C7C3271CC01E008B34A3 /* TabView.swift */; };
+		16B1C7C7271CC7B7008B34A3 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 16B1C7C6271CC7B7008B34A3 /* Networking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B1C7C7271CC7B7008B34A3 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,7 @@
 				16B1C7BC271CB852008B34A3 /* ContentView.swift */,
 				16223FC127128A37004D27D3 /* Utilities */,
 				166B76732715007000A42930 /* Extensions */,
+				16B1C7C8271CC8B9008B34A3 /* Services */,
 				16223FBC2710D3D3004D27D3 /* Models */,
 				16B1C7B4271CB176008B34A3 /* ViewModels */,
 				16B1C7B3271CB172008B34A3 /* Views */,
@@ -147,6 +150,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		16B1C7C8271CC8B9008B34A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +173,9 @@
 			dependencies = (
 			);
 			name = PeerTutor;
+			packageProductDependencies = (
+				16B1C7C6271CC7B7008B34A3 /* Networking */,
+			);
 			productName = PeerTutor;
 			productReference = 16223FAA2710D35F004D27D3 /* PeerTutor.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +203,9 @@
 				Base,
 			);
 			mainGroup = 16223FA12710D35F004D27D3;
+			packageReferences = (
+				16B1C7C5271CC7B7008B34A3 /* XCRemoteSwiftPackageReference "Networking" */,
+			);
 			productRefGroup = 16223FAB2710D35F004D27D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -416,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16B1C7C5271CC7B7008B34A3 /* XCRemoteSwiftPackageReference "Networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Networking";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16B1C7C6271CC7B7008B34A3 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16B1C7C5271CC7B7008B34A3 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16223FA22710D35F004D27D3 /* Project object */;
 }

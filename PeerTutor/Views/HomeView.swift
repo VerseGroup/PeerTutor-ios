@@ -34,7 +34,7 @@ extension HomeView {
             LogoView()
                 .padding(.top, 30)
         }
-        .frame(width: .infinity, height: 100)
+        .frame(width: nil, height: 100)
     }
     
     private var welcomeMessage: some View {

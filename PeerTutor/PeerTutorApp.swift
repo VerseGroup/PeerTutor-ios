@@ -11,7 +11,9 @@ import SwiftUI
 struct PeerTutorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+            }
         }
     }
 }

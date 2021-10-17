@@ -15,11 +15,13 @@ struct User: Codable, Identifiable {
     let grade: Int
     let joinDate: String
     
+    let teachableGrades: [Int]
     let frees: [Period]
     
     enum CodingKeys: String, CodingKey {
         case id, username, email, permission, grade, frees
         case joinDate = "date-joined"
+        case teachableGrades = "teachable-grades"
     }
 }
 
