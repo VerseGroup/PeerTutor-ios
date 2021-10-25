@@ -1,5 +1,5 @@
 //
-//  TabView.swift
+//  MenuTabView.swift
 //  PeerTutor
 //
 //  Created by Steven Yu on 10/17/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct MenuTabView: View {
     
     var color: Color
     var text: String
@@ -36,7 +36,7 @@ struct TabView: View {
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabView(color: Color.red, text: "Your learning\nsessions")
+        MenuTabView(color: Color.red, text: "Your learning\nsessions")
             .previewLayout(.sizeThatFits)
     }
 }

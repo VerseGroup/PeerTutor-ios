@@ -27,6 +27,7 @@ struct HomeView: View {
 }
 
 extension HomeView {
+    // header
     private var homeHeader: some View {
         ZStack {
             Color.theme.secondaryBackground
@@ -37,6 +38,7 @@ extension HomeView {
         .frame(width: nil, height: 100)
     }
     
+    // welcomes the currentUser
     private var welcomeMessage: some View {
         VStack(alignment: .leading) {
             Text("Welcome!")
@@ -46,6 +48,7 @@ extension HomeView {
         }
     }
     
+    // sessions
     private var sessionsSection: some View {
         VStack(alignment: .leading, spacing: 20) {
             Label(
@@ -53,20 +56,23 @@ extension HomeView {
                 icon: { Image(systemName: "person.fill") }
             )
             
+            // learning sessions
             NavigationLink(
                 destination: Text("Learning Sessions"),
                 label: {
-                    TabView(color: Color.theme.blue, text: "Your learning\nsessions")
+                    MenuTabView(color: Color.theme.blue, text: "Your learning\nsessions")
                 })
             
+            // teaching sessions
             NavigationLink(
                 destination: Text("Teaching Sessions"),
                 label: {
-                    TabView(color: Color.theme.green, text: "Your teaching\nsessions")
+                    MenuTabView(color: Color.theme.green, text: "Your teaching\nsessions")
                 })
         }
     }
     
+    // requests
     private var requestsSection: some View {
         VStack(alignment: .leading, spacing: 20) {
             Label(
@@ -74,16 +80,18 @@ extension HomeView {
                 icon: { Image(systemName: "person.fill.badge.plus") }
             )
             
+            // learning requests
             NavigationLink(
                 destination: Text("Learning Requests"),
                 label: {
-                    TabView(color: Color.theme.red, text: "Your learning\nrequests")
+                    MenuTabView(color: Color.theme.red, text: "Your learning\nrequests")
                 })
             
+            // teaching requests
             NavigationLink(
                 destination: Text("Teaching Requests"),
                 label: {
-                    TabView(color: Color.theme.yellow, text: "Your teaching\nrequests")
+                    MenuTabView(color: Color.theme.yellow, text: "Your teaching\nrequests")
                 })
         }
     }
@@ -95,16 +103,18 @@ extension HomeView {
                 icon: { Image(systemName: "info.circle") }
             )
             
+            // user info
             NavigationLink(
                 destination: Text("Your user info"),
                 label: {
-                    TabView(color: Color.theme.orange, text: "Your user\ninfo")
+                    MenuTabView(color: Color.theme.orange, text: "Your user\ninfo")
                 })
             
+            // about this app
             NavigationLink(
-                destination: Text("About"),
+                destination: AboutView(),
                 label: {
-                    TabView(color: Color.theme.purple, text: "About this\napp")
+                    MenuTabView(color: Color.theme.purple, text: "About this\napp")
                 })
         }
     }

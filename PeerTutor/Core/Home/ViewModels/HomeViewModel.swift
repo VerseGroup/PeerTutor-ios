@@ -8,5 +8,7 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
+    private let userManager: UserManager = UserManager.instance
+    
     
 }

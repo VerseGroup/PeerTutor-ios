@@ -15,44 +15,25 @@ struct OnboardingView: View {
         removal: .move(edge: .leading))
     
     var body: some View {
-        switch onboardingStage {
-        case 0:
+        TabView {
             welcomePage
-                .transition(transition)
-        case 1:
+                .tag(0)
             learningRequestPage
-                .transition(transition)
-        case 2:
+                .tag(1)
             teachingRequestPage
-                .transition(transition)
-        case 3:
+                .tag(2)
             learningSessionPage
-                .transition(transition)
-        case 4:
+                .tag(3)
             teachingSessionPage
-                .transition(transition)
-        default:
-            Text("Uh oh")
+                .tag(4)
+            
         }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
 extension OnboardingView {
-    private var continueButton: some View {
-        Button(action: {
-            withAnimation {
-                onboardingStage += 1
-            }
-        }, label: {
-            HStack {
-                Text("Continue")
-                Image(systemName: "chevron.right")
-            }
-            .foregroundColor(Color.theme.background)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.theme.text))
-        })
-    }
     
     private var welcomePage: some View {
         VStack {
@@ -75,10 +56,6 @@ extension OnboardingView {
                 .fontWeight(.bold)
             
             Spacer()
-            
-            continueButton
-            .font(.headline)
-            .padding()
         }
         .padding()
     }
@@ -100,14 +77,9 @@ extension OnboardingView {
             
             Spacer()
             
-            TabView(color: Color.theme.red, text: "Your learning\nrequests")
+            MenuTabView(color: Color.theme.red, text: "Your learning\nrequests")
             
             Spacer()
-            
-            Spacer()
-            continueButton
-            .font(.headline)
-            .padding()
         }
         .padding()
     }
@@ -129,14 +101,9 @@ extension OnboardingView {
             
             Spacer()
             
-            TabView(color: Color.theme.yellow, text: "Your teaching\nrequests")
+            MenuTabView(color: Color.theme.yellow, text: "Your teaching\nrequests")
             
             Spacer()
-            
-            Spacer()
-            continueButton
-            .font(.headline)
-            .padding()
         }
         .padding()
     }
@@ -158,14 +125,9 @@ extension OnboardingView {
             
             Spacer()
             
-            TabView(color: Color.theme.blue, text: "Your learning\nsessions")
+            MenuTabView(color: Color.theme.blue, text: "Your learning\nsessions")
             
             Spacer()
-            
-            Spacer()
-            continueButton
-            .font(.headline)
-            .padding()
         }
         .padding()
     }
@@ -187,14 +149,11 @@ extension OnboardingView {
             
             Spacer()
             
-            TabView(color: Color.theme.green, text: "Your teaching\nsessions")
+            MenuTabView(color: Color.theme.green, text: "Your teaching\nsessions")
             
             Spacer()
             
             Spacer()
-            continueButton
-            .font(.headline)
-            .padding()
         }
         .padding()
     }
