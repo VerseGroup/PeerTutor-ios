@@ -26,7 +26,6 @@ struct OnboardingView: View {
                 .tag(3)
             teachingSessionPage
                 .tag(4)
-            
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -152,8 +151,6 @@ extension OnboardingView {
             MenuTabView(color: Color.theme.green, text: "Your teaching\nsessions")
             
             Spacer()
-            
-            Spacer()
         }
         .padding()
     }
@@ -161,6 +158,9 @@ extension OnboardingView {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        NavigationView {
+            OnboardingView()
+                .navigationBarHidden(true)
+        }
     }
 }

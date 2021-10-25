@@ -1,5 +1,5 @@
 //
-//  OnboardingViewModel.swift
+//  AuthenticationViewModel.swift
 //  PeerTutor
 //
 //  Created by Steven Yu on 10/19/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OnboardingViewModel: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     private let userManager: UserManager = UserManager.instance
     
     
