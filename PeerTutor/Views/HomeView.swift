@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             homeHeader
             
             welcomeMessage

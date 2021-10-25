@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Networking
 
 struct User: Codable, Identifiable {
     let id: Int
@@ -14,16 +15,12 @@ struct User: Codable, Identifiable {
     let permission: Int
     let grade: Int
     let joinDate: String
-    
-    let teachableGrades: [Int]
     let frees: [Period]
     
-    enum CodingKeys: String, CodingKey {
-        case id, username, email, permission, grade, frees
-        case joinDate = "date-joined"
-        case teachableGrades = "teachable-grades"
-    }
+    let teachableGrades: [Int]
 }
+
+extension User: NetworkingJSONDecodable {}
 
 enum Period: String, Codable {
     case d1p1, d1p2, d1p3, d1p4, d1p5, d1p6, d1p7

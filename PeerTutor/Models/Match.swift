@@ -6,6 +6,14 @@
 //
 
 import Foundation
+import Networking
+
+// gets all matches (for learning or teaching)
+struct Matches: Codable {
+    let matches: [Match]
+}
+
+extension Matches: NetworkingJSONDecodable {}
 
 struct Match: Codable, Identifiable {
     let id: Int
@@ -14,3 +22,5 @@ struct Match: Codable, Identifiable {
     let course: Course
     let period: Period
 }
+
+extension Match: NetworkingJSONDecodable {}
