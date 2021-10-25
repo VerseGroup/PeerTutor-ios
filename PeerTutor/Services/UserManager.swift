@@ -8,5 +8,5 @@
 import Foundation
 
 class UserManager: ObservableObject {
-    
+    private let api = APIManager()
 }
