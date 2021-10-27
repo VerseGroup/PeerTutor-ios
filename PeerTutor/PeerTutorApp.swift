@@ -14,11 +14,8 @@ struct PeerTutorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HomeView()
-                    .navigationBarHidden(true)
-            }
-            .environmentObject(vm)
+            ContentView()
+                .environmentObject(vm)
         }
     }
 }

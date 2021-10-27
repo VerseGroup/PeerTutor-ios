@@ -154,6 +154,30 @@ extension OnboardingView {
         }
         .padding()
     }
+    
+    private var proceedPage: some View {
+        VStack {
+            VStack {
+                LogoView()
+            }
+            .frame(height: 100)
+            .padding()
+            
+            Spacer()
+            
+            Text("Once a match is made, see when you’re scheduled to tutor in the teaching sessions tab")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
+            
+            Spacer()
+            
+            MenuTabView(color: Color.theme.green, text: "Your teaching\nsessions")
+            
+            Spacer()
+        }
+        .padding()
+    }
 }
 
 struct OnboardingView_Previews: PreviewProvider {

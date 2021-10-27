@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("signed_in") var currentUserSignedIn: Bool = false
+    
     var body: some View {
-        Text("Hello, World!")
+        if currentUserSignedIn {
+            HomeView()
+                .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)))
+        } else {
+            NavigationView {
+                OnboardingView()
+                    .navigationBarHidden(true)
+            }
+        }
     }
 }
 
