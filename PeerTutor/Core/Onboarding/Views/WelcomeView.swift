@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-struct OnboardingView: View {
-    
-    @State var onboardingStage = 0
-    let transition: AnyTransition = .asymmetric(
-        insertion: .move(edge: .trailing),
-        removal: .move(edge: .leading))
+struct WelcomeView: View {
+    // toggles showWelcome after user continues
+    @Binding var showWelcome: Bool
     
     var body: some View {
         TabView {
@@ -26,33 +23,34 @@ struct OnboardingView: View {
                 .tag(3)
             teachingSessionPage
                 .tag(4)
+            proceedPage
+                .tag(5)
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
-extension OnboardingView {
+extension WelcomeView {
     
     private var welcomePage: some View {
         VStack {
             VStack {
-                Text("Welcome to")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Spacer()
                 LogoView()
-                Spacer()
-                Text("Learn and teach your classmates")
             }
             .frame(height: 100)
             .padding()
             
             Spacer()
             
-            Text("Let's get started!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+            VStack {
+                Text("Welcome!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Text("Learn and teach your classmates")
+            }
+            
+            Spacer()
             
             Spacer()
         }
@@ -165,14 +163,23 @@ extension OnboardingView {
             
             Spacer()
             
-            Text("Once a match is made, see when you’re scheduled to tutor in the teaching sessions tab")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
+            Text("Let's get started!")
+                .font(.largeTitle)
+                .fontWeight(.bold)
             
             Spacer()
             
-            MenuTabView(color: Color.theme.green, text: "Your teaching\nsessions")
+            Button(action: {
+                showWelcome.toggle()
+            }, label: {
+                Text("Authenticate")
+                    .foregroundColor(Color.theme.background)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.theme.text)
+                    )
+            })
             
             Spacer()
         }
@@ -183,7 +190,7 @@ extension OnboardingView {
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            OnboardingView()
+            WelcomeView(showWelcome: .constant(true))
                 .navigationBarHidden(true)
         }
     }

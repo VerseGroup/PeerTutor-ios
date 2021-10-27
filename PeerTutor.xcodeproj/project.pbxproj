@@ -13,7 +13,7 @@
 		164A769B2727147800BE0201 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A769A2727147800BE0201 /* Messages.swift */; };
 		164A769D2727170E00BE0201 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A769C2727170E00BE0201 /* APIManager.swift */; };
 		164A76A42727270100BE0201 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A76A32727270100BE0201 /* AboutView.swift */; };
-		16561355271F047D004BFAEC /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16561354271F047D004BFAEC /* OnboardingViewModel.swift */; };
+		16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16561354271F047D004BFAEC /* AuthenticationViewModel.swift */; };
 		166B76752715008B00A42930 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76742715008B00A42930 /* PreviewProvider.swift */; };
 		166B76772715009A00A42930 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76762715009A00A42930 /* User.swift */; };
 		166B7679271500AA00A42930 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B7678271500AA00A42930 /* Course.swift */; };
@@ -28,7 +28,7 @@
 		16B1C7C2271CBB38008B34A3 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1C7C1271CBB38008B34A3 /* LogoView.swift */; };
 		16B1C7C4271CC01E008B34A3 /* MenuTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1C7C3271CC01E008B34A3 /* MenuTabView.swift */; };
 		16B1C7C7271CC7B7008B34A3 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 16B1C7C6271CC7B7008B34A3 /* Networking */; };
-		16C6E5B8271EF871009A4F05 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C6E5B7271EF871009A4F05 /* OnboardingView.swift */; };
+		16C6E5B8271EF871009A4F05 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C6E5B7271EF871009A4F05 /* WelcomeView.swift */; };
 		16E97E81272499EC0011C351 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E97E80272499EC0011C351 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		164A769A2727147800BE0201 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		164A769C2727170E00BE0201 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		164A76A32727270100BE0201 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		16561354271F047D004BFAEC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		16561354271F047D004BFAEC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		166B76742715008B00A42930 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		166B76762715009A00A42930 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		166B7678271500AA00A42930 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		16B1C7BE271CB884008B34A3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		16B1C7C1271CBB38008B34A3 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		16B1C7C3271CC01E008B34A3 /* MenuTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabView.swift; sourceTree = "<group>"; };
-		16C6E5B7271EF871009A4F05 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		16C6E5B7271EF871009A4F05 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		16E97E80272499EC0011C351 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +154,7 @@
 		164A76A12727260800BE0201 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				16561354271F047D004BFAEC /* OnboardingViewModel.swift */,
+				16561354271F047D004BFAEC /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 		164A76A22727260D00BE0201 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				16C6E5B7271EF871009A4F05 /* OnboardingView.swift */,
+				16C6E5B7271EF871009A4F05 /* WelcomeView.swift */,
 				167626FE27275B8500B15581 /* AuthenticationView.swift */,
 			);
 			path = Views;
@@ -296,7 +296,7 @@
 				16E97E81272499EC0011C351 /* UserManager.swift in Sources */,
 				166B7679271500AA00A42930 /* Course.swift in Sources */,
 				166B76752715008B00A42930 /* PreviewProvider.swift in Sources */,
-				16561355271F047D004BFAEC /* OnboardingViewModel.swift in Sources */,
+				16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */,
 				166B76772715009A00A42930 /* User.swift in Sources */,
 				16B1C7BF271CB884008B34A3 /* HomeViewModel.swift in Sources */,
 				16B1C7BD271CB852008B34A3 /* ContentView.swift in Sources */,
@@ -306,7 +306,7 @@
 				164A769D2727170E00BE0201 /* APIManager.swift in Sources */,
 				16223FAE2710D35F004D27D3 /* PeerTutorApp.swift in Sources */,
 				16B1C7C4271CC01E008B34A3 /* MenuTabView.swift in Sources */,
-				16C6E5B8271EF871009A4F05 /* OnboardingView.swift in Sources */,
+				16C6E5B8271EF871009A4F05 /* WelcomeView.swift in Sources */,
 				166B767B271500BD00A42930 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

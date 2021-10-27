@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct AuthenticationView: View {
+    // shows welcome view only on first screen
+    @AppStorage("show_welcome") var showWelcomeView: Bool = true
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Hello, please sign in!")
+                .fullScreenCover(isPresented: $showWelcomeView, content: {
+                    WelcomeView(showWelcome: $showWelcomeView)
+                })
+        }
     }
 }
 

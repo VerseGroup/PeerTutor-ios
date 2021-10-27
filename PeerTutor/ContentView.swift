@@ -12,13 +12,13 @@ struct ContentView: View {
     
     var body: some View {
         if currentUserSignedIn {
-            HomeView()
-                .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)))
-        } else {
             NavigationView {
-                OnboardingView()
+                HomeView()
+                    .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)))
                     .navigationBarHidden(true)
             }
+        } else {
+            AuthenticationView()
         }
     }
 }
