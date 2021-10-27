@@ -20,17 +20,17 @@ struct AboutView: View {
                     This app was made by...
                     
                     Paul Evans
-                     - Handled making the backend of the app
+                     • Handled making the backend of the app
                     Malcolm Krolick
-                     - Handled dealing with hosting the server
+                     • Handled dealing with hosting the server
                     Steven Yu
-                        - Made the iOS app
+                     • Made the iOS app
                     
                     This app made use of:
-                     - SwiftUI
-                     - Combine
-                     - Networking
-                     - Flask
+                     • SwiftUI
+                     • Combine
+                     • Networking
+                     • Flask
                     """)
                         .font(.title3)
                         .fontWeight(.medium)

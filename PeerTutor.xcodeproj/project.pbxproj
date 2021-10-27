@@ -206,8 +206,8 @@
 		16B1C7C8271CC8B9008B34A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				16E97E80272499EC0011C351 /* UserManager.swift */,
 				164A769C2727170E00BE0201 /* APIManager.swift */,
+				16E97E80272499EC0011C351 /* UserManager.swift */,
 				1676270027279CB400B15581 /* AuthenticationManager.swift */,
 			);
 			path = Services;
