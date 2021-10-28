@@ -77,19 +77,23 @@ extension AuthenticationView {
                     Text("Username")
                     TextField("", text: $vm.username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                 }
                 
                 VStack(alignment: .leading) {
                     Text("Password")
-                    TextField("", text: $vm.password)
+                    SecureField("", text: $vm.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                 }
             }
             .padding()
             .padding(.vertical, 25)
             
             Button(action: {
-                
+                vm.login()
             }, label: {
                 ButtonView(color: Color.theme.orange, text: "Sign In")
             })
@@ -108,9 +112,7 @@ extension AuthenticationView {
             }
             .frame(height: 100)
             .padding()
-            
-            Spacer()
-            VStack(spacing: 25) {
+            VStack() {
                 VStack(alignment: .leading) {
                     Text("Username")
                     TextField("", text: $vm.username)
@@ -125,17 +127,20 @@ extension AuthenticationView {
                 
                 VStack(alignment: .leading) {
                     Text("Grade")
-                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/,
-                           label: Text("Grade"), content: {
-                        /*@START_MENU_TOKEN@*/Text("1").tag(1)/*@END_MENU_TOKEN@*/
-                        /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
-                    })
-                    .pickerStyle(SegmentedPickerStyle())
+                    Picker(selection: .constant(2),
+                           label: Text("Grade"),
+                           content: {
+                            Text("9").tag(1)
+                            Text("10").tag(2)
+                            Text("11").tag(3)
+                            Text("12").tag(4)
+                           })
+                        .pickerStyle(SegmentedPickerStyle())
                 }
                 
                 VStack(alignment: .leading) {
                     Text("Password")
-                    TextField("", text: $vm.password)
+                    SecureField("", text: $vm.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
             }

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("signed_in") var currentUserSignedIn: Bool = false
+    private var userManager = UserManager.instance
     
     var body: some View {
-        if currentUserSignedIn {
+        if userManager.signedIn {
             NavigationView {
                 HomeView()
                     .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)))

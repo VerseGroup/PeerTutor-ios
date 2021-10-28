@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class AuthenticationViewModel: ObservableObject {
+    private let userManager = UserManager.instance
     private let api = APIManager()
     
     @Published var username: String = ""
@@ -19,8 +20,11 @@ class AuthenticationViewModel: ObservableObject {
     @Published var alertMessage: String = ""
     
     func login() {
-        
+        userManager.loginUser(username: username, password: password)
     }
     
+    func register() {
+//        userManager.registerUser(username: username, email: email, grade: <#T##Int#>, password: password, frees: <#T##[Period]#>, teachableGrades: <#T##[Int]#>)
+    }
     
 }

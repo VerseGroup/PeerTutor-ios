@@ -7,15 +7,14 @@
 
 import Foundation
 import Combine
-import SwiftUI
 
 // handles and manages the CRUD for the current user
 class UserManager: ObservableObject {
     // will only have one instance of UserManager, all viewmodels should point to this instance
-    //static let instance = UserManager()
+    static let instance = UserManager()
     
-    init(user: User) {
-        self.currentUser = user
+    init() {
+        loadCurrentUser()
         getCourseCatalog()
     }
     
@@ -23,10 +22,9 @@ class UserManager: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     // checks if user is logged in
-    // appstorage
 
     // the current signed in user
-    @Published var currentUser: User
+    @Published var currentUser: User? = nil
     
     // the user's matches
     @Published var learningMatches: Matches?
@@ -41,6 +39,21 @@ class UserManager: ObservableObject {
     
     // message the API outputs
     @Published var message: String = ""
+    
+    @Published var signedIn: Bool = false
+    
+    //
+    func loadCurrentUser() {
+        guard
+            let data = UserDefaults.standard.data(forKey: "user"),
+            let user = try? JSONDecoder().decode(User.self, from: data)
+        else {
+            signedIn = false
+            return
+        }
+        signedIn = true
+        currentUser = user
+    }
     
     // handles the completion, if fetches data successfully, sinks data, otherwise prints error
     func completionHandler(result: Subscribers.Completion<Error>) -> () {
@@ -142,11 +155,18 @@ class UserManager: ObservableObject {
             .sink(receiveCompletion: completionHandler) { JSONMessage in
                 if let user = JSONMessage.user {
                     self.currentUser = user
+                    if let encodedData = try? JSONEncoder().encode(user) {
+                        UserDefaults.standard.set(encodedData, forKey: "user")
+                    }
+                    self.signedIn = true
                 } else {
                     self.message = "Can't log in, try again?"
+                    print("SAD!")
                 }
             }
             .store(in: &cancellables)
+        
+        print(self.currentUser?.username ?? "LOL")
     }
     
     // requests a match for the user and course
