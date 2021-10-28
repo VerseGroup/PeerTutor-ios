@@ -16,7 +16,12 @@ class AuthenticationViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var password: String = ""
     @Published var email: String = ""
+    @Published var gradePicker: Int = 0
+    @Published var frees: [Period] = []
+    @Published var teachableGrades: [Int] = []
     @Published var alertMessage: String = ""
+    
+    let grades: [Int] = [9, 10, 11, 12]
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -37,8 +42,9 @@ class AuthenticationViewModel: ObservableObject {
         userManager.loginUser(username: username, password: password)
     }
     
+    // WIP
     func register() {
-//        userManager.registerUser(username: username, email: email, grade: <#T##Int#>, password: password, frees: <#T##[Period]#>, teachableGrades: <#T##[Int]#>)
+        userManager.registerUser(username: username, email: email, grade: grades[gradePicker], password: password, frees: frees, teachableGrades: teachableGrades)
     }
     
 }

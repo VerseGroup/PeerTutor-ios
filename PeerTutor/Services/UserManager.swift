@@ -144,8 +144,14 @@ class UserManager: ObservableObject {
             .sink(receiveCompletion: completionHandler) { JSONMessage in
                 if let user = JSONMessage.user {
                     self.currentUser = user
+                    if let encodedData = try? JSONEncoder().encode(user) {
+                        UserDefaults.standard.set(encodedData, forKey: "user")
+                    }
+                    self.signedIn = true
+                    UserManager.instance.objectWillChange.send()
                 } else {
                     self.alertMessage = "Can't register, try again?"
+                    print("Can't register user")
                 }
             }
             .store(in: &cancellables)
@@ -164,7 +170,7 @@ class UserManager: ObservableObject {
                     UserManager.instance.objectWillChange.send()
                 } else {
                     self.alertMessage = "Can't log in, try again?"
-                    print("SAD!")
+                    print("Can't sign in user!")
                 }
             }
             .store(in: &cancellables)

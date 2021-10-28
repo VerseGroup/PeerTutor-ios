@@ -128,15 +128,12 @@ extension AuthenticationView {
                 
                 VStack(alignment: .leading) {
                     Text("Grade")
-                    Picker(selection: .constant(2),
-                           label: Text("Grade"),
-                           content: {
-                            Text("9").tag(1)
-                            Text("10").tag(2)
-                            Text("11").tag(3)
-                            Text("12").tag(4)
-                           })
-                        .pickerStyle(SegmentedPickerStyle())
+                    Picker("Grade", selection: $vm.gradePicker, content: {
+                        ForEach(0..<vm.grades.count) { grade in
+                            Text("\(vm.grades[grade])")
+                        }
+                    })
+                    .pickerStyle(SegmentedPickerStyle())
                 }
                 
                 VStack(alignment: .leading) {
@@ -149,7 +146,7 @@ extension AuthenticationView {
             .padding(.vertical, 25)
             
             Button(action: {
-                
+                vm.register()
             }, label: {
                 ButtonView(color: Color.theme.orange, text: "Sign Up")
             })
