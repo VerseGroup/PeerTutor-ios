@@ -14,7 +14,7 @@ struct PeerTutorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouterView()
                 .environmentObject(vm)
         }
     }

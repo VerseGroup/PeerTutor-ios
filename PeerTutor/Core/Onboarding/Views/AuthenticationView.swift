@@ -37,11 +37,17 @@ struct AuthenticationView: View {
                 }, label: {
                     ButtonView(color: Color.theme.orange, text: "Sign In")
                 })
+                .sheet(isPresented: $showSignIn, content: {
+                    signInView
+                })
                 
                 Button(action: {
                     showSignUp.toggle()
                 }, label: {
                     ButtonView(color: Color.theme.orange, text: "Sign Up")
+                })
+                .sheet(isPresented: $showSignUp, content: {
+                    signUpView
                 })
             }
             
@@ -52,12 +58,6 @@ struct AuthenticationView: View {
         .padding()
         .fullScreenCover(isPresented: $showWelcomeView, content: {
             WelcomeView(showWelcome: $showWelcomeView)
-        })
-        .sheet(isPresented: $showSignIn, content: {
-            signInView
-        })
-        .sheet(isPresented: $showSignUp, content: {
-            signUpView
         })
     }
 }

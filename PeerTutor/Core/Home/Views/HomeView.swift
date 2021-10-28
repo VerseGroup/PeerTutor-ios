@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             homeHeader
@@ -105,7 +107,7 @@ extension HomeView {
             
             // user info
             NavigationLink(
-                destination: Text("Your user info"),
+                destination: Text(vm.userManager.currentUser?.username ?? ""),
                 label: {
                     MenuTabView(color: Color.theme.orange, text: "Your user\ninfo")
                 })

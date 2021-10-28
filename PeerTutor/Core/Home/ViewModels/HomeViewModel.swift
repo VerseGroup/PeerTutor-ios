@@ -10,5 +10,5 @@ import Foundation
 class HomeViewModel: ObservableObject {
     let userManager: UserManager = UserManager.instance
     
-    //@Published var username: String = userManager.currentUser?.username ?? ""
+   
 }
