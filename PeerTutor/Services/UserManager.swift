@@ -172,6 +172,13 @@ class UserManager: ObservableObject {
         print(self.currentUser?.username ?? "LOL")
     }
     
+    // logs out user and removes their info from currentUser and UserDefaults
+    func logoutUser() {
+        self.currentUser = nil
+        signedIn = false
+        UserDefaults.standard.removeObject(forKey: "user")
+    }
+    
     // requests a match for the user and course
     // relationship:
     // true means the user is a teacher (will appear in findMatchRequestByTutor)

@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  RouterViewModel.swift
 //  PeerTutor
 //
 //  Created by Steven Yu on 10/27/21.
@@ -16,6 +16,7 @@ class RouterViewModel: ObservableObject {
         addSubscribers()
     }
     
+    // subscribes to the signedIn boolean, if signedIn becomes false, will store that value in showHomeView, so will switch showing the views
     private func addSubscribers() {
         UserManager.instance.$signedIn
             .sink { [weak self] value in

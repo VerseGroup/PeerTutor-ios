@@ -24,6 +24,7 @@ class AuthenticationViewModel: ObservableObject {
         addSubscribers()
     }
     
+    // subscribes to alertMessage, will automatically change the vm's message if UserManager's alertMessage changes
     private func addSubscribers() {
         UserManager.instance.$alertMessage
             .sink { [weak self] message in
