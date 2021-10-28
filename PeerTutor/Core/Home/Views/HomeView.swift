@@ -107,7 +107,7 @@ extension HomeView {
             
             // user info
             NavigationLink(
-                destination: Text(vm.userManager.currentUser?.username ?? ""),
+                destination: InfoView(),
                 label: {
                     MenuTabView(color: Color.theme.orange, text: "Your user\ninfo")
                 })
