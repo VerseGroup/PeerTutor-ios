@@ -159,6 +159,7 @@ class UserManager: ObservableObject {
                         UserDefaults.standard.set(encodedData, forKey: "user")
                     }
                     self.signedIn = true
+                    UserManager.instance.objectWillChange.send()
                 } else {
                     self.message = "Can't log in, try again?"
                     print("SAD!")
