@@ -12,8 +12,10 @@ import SwiftUI
 // handles and manages the CRUD for the current user
 class UserManager: ObservableObject {
     // will only have one instance of UserManager, all viewmodels should point to this instance
-    static let instance = UserManager()
-    private init() {
+    //static let instance = UserManager()
+    
+    init(user: User) {
+        self.currentUser = user
         getCourseCatalog()
     }
     
@@ -24,7 +26,7 @@ class UserManager: ObservableObject {
     // appstorage
 
     // the current signed in user
-    @Published var currentUser: User?
+    @Published var currentUser: User
     
     // the user's matches
     @Published var learningMatches: Matches?
@@ -39,7 +41,6 @@ class UserManager: ObservableObject {
     
     // message the API outputs
     @Published var message: String = ""
-    
     
     // handles the completion, if fetches data successfully, sinks data, otherwise prints error
     func completionHandler(result: Subscribers.Completion<Error>) -> () {

@@ -19,6 +19,6 @@ extension PreviewProvider {
 class DeveloperPreview {
     
     static let instance = DeveloperPreview()
-    
+    let authenticationVM = AuthenticationViewModel()
     let homeVM = HomeViewModel()
 }

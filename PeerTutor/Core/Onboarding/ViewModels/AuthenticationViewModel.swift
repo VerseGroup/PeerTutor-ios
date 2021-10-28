@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 class AuthenticationViewModel: ObservableObject {
-    private let userManager: UserManager = UserManager.instance
-    
+    private let api = APIManager()
     
     @Published var username: String = ""
     @Published var password: String = ""
+    @Published var email: String = ""
     
-    init() {
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = ""
+    
+    func login() {
         
     }
     
