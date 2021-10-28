@@ -48,7 +48,8 @@ class UserManager: ObservableObject {
     func loadCurrentUser() {
         guard
             let data = UserDefaults.standard.data(forKey: "user"),
-            let user = try? JSONDecoder().decode(User.self, from: data)
+            let user = try? JSONDecoder().decode(User.self, from: data),
+            let user = getUser(id: user.id)
         else {
             signedIn = false
             return

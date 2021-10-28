@@ -107,7 +107,7 @@ extension AuthenticationView {
     }
     
     private var signUpView: some View {
-        VStack {
+        ScrollView {
             VStack {
                 LogoView()
             }
