@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class AuthenticationViewModel: ObservableObject {
     private let userManager = UserManager.instance
@@ -15,9 +16,21 @@ class AuthenticationViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var password: String = ""
     @Published var email: String = ""
-    
-    @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        addSubscribers()
+    }
+    
+    private func addSubscribers() {
+        UserManager.instance.$alertMessage
+            .sink { [weak self] message in
+                self?.alertMessage = message
+            }
+            .store(in: &cancellables)
+    }
     
     func login() {
         userManager.loginUser(username: username, password: password)

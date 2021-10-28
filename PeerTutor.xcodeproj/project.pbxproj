@@ -165,8 +165,8 @@
 		164A76A22727260D00BE0201 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				16C6E5B7271EF871009A4F05 /* WelcomeView.swift */,
 				167626FE27275B8500B15581 /* AuthenticationView.swift */,
+				16C6E5B7271EF871009A4F05 /* WelcomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

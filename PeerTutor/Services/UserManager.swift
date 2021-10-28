@@ -42,7 +42,9 @@ class UserManager: ObservableObject {
     
     @Published var signedIn: Bool = false
     
-    //
+    @Published var alertMessage: String = ""
+    
+    // loads user if user exists
     func loadCurrentUser() {
         guard
             let data = UserDefaults.standard.data(forKey: "user"),
@@ -143,7 +145,7 @@ class UserManager: ObservableObject {
                 if let user = JSONMessage.user {
                     self.currentUser = user
                 } else {
-                    self.message = "Can't register, try again?"
+                    self.alertMessage = "Can't register, try again?"
                 }
             }
             .store(in: &cancellables)
@@ -161,7 +163,7 @@ class UserManager: ObservableObject {
                     self.signedIn = true
                     UserManager.instance.objectWillChange.send()
                 } else {
-                    self.message = "Can't log in, try again?"
+                    self.alertMessage = "Can't log in, try again?"
                     print("SAD!")
                 }
             }
