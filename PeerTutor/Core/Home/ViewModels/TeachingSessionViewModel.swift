@@ -1,5 +1,5 @@
 //
-//  LearningSessionViewModel.swift
+//  TeachingSessionViewModel.swift
 //  PeerTutor
 //
 //  Created by Steven Yu on 10/30/21.
@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-// bug where won't tell user is loading - fixed :)
-class LearningSessionViewModel: ObservableObject {
+
+class TeachingSessionViewModel: ObservableObject {
     var userManager: UserManager = UserManager.instance
     
     @Published var matches: [Match] = []
@@ -25,13 +25,13 @@ class LearningSessionViewModel: ObservableObject {
     
     private func getMatches() {
         if let user = userManager.currentUser {
-            userManager.findMatchByTutee(user: user)
+            userManager.findMatchByTutor(user: user)
         }
     }
     
     // binds to the currentUser to display info
     func addSubscribers() {
-        userManager.$learningMatches
+        userManager.$teachingMatches
             // fixes issue with first element being empty
             .dropFirst()
             .map { matches -> (matches: [Match], loading: Bool) in

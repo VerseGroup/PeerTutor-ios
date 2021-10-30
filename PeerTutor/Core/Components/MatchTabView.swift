@@ -25,6 +25,8 @@ struct MatchTabView: View {
                     .font(.caption)
                     .foregroundColor(Color.theme.secondaryText)
                 HStack(alignment: .bottom) {
+                    //  production bug (shouldn't happen irl), since dev is matched with dev, teaching will also show the learning colors
+                    
                     // if currentUser is a tutee, show the tutor
                     Text(match.tutee.id == UserManager.instance.currentUser!.id ? match.tutor.username : match.tutee.username)
                         .font(.title3)
