@@ -13,13 +13,26 @@ struct MatchTabView: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            VStack(alignment: .leading) {
                 HStack {
                     Text(match.course.name)
                         .fontWeight(.bold)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(Font.title.weight(.medium))
+                }
+                Text("with: ")
+                    .font(.caption)
+                    .foregroundColor(Color.theme.secondaryText)
+                HStack(alignment: .bottom) {
+                    // if currentUser is a tutee, show the tutor
+                    Text(match.tutee.id == UserManager.instance.currentUser!.id ? match.tutor.username : match.tutee.username)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Text(match.period.description)
+                        .font(.title2)
+                        .fontWeight(.semibold)
                 }
             }
             .padding()
