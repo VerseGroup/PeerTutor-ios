@@ -17,6 +17,9 @@
 		164B3650272A43CB000CC561 /* RouterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164B364F272A43CB000CC561 /* RouterViewModel.swift */; };
 		16506FD6272DC6C700B99C19 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FD5272DC6C700B99C19 /* InfoViewModel.swift */; };
 		16506FD8272DCC0400B99C19 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FD7272DCC0400B99C19 /* String.swift */; };
+		16506FDA272DD41000B99C19 /* LearningSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FD9272DD41000B99C19 /* LearningSessionViewModel.swift */; };
+		16506FDC272DD68F00B99C19 /* LearningSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FDB272DD68F00B99C19 /* LearningSessionView.swift */; };
+		16506FDE272DD7B000B99C19 /* MatchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FDD272DD7B000B99C19 /* MatchTabView.swift */; };
 		16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16561354271F047D004BFAEC /* AuthenticationViewModel.swift */; };
 		166B76752715008B00A42930 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76742715008B00A42930 /* PreviewProvider.swift */; };
 		166B76772715009A00A42930 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76762715009A00A42930 /* User.swift */; };
@@ -50,6 +53,9 @@
 		164B364F272A43CB000CC561 /* RouterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterViewModel.swift; sourceTree = "<group>"; };
 		16506FD5272DC6C700B99C19 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		16506FD7272DCC0400B99C19 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		16506FD9272DD41000B99C19 /* LearningSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSessionViewModel.swift; sourceTree = "<group>"; };
+		16506FDB272DD68F00B99C19 /* LearningSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSessionView.swift; sourceTree = "<group>"; };
+		16506FDD272DD7B000B99C19 /* MatchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTabView.swift; sourceTree = "<group>"; };
 		16561354271F047D004BFAEC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		166B76742715008B00A42930 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		166B76762715009A00A42930 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 				16B1C7B6271CB1AF008B34A3 /* HomeView.swift */,
 				16792BE9272A4B2D00510E32 /* InfoView.swift */,
 				164A76A32727270100BE0201 /* AboutView.swift */,
+				16506FDB272DD68F00B99C19 /* LearningSessionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			children = (
 				16B1C7BE271CB884008B34A3 /* HomeViewModel.swift */,
 				16506FD5272DC6C700B99C19 /* InfoViewModel.swift */,
+				16506FD9272DD41000B99C19 /* LearningSessionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 				16B1C7C3271CC01E008B34A3 /* MenuTabView.swift */,
 				164B364B272A1A9D000CC561 /* ButtonView.swift */,
 				16792BEB272A4C8E00510E32 /* InfoSnippetView.swift */,
+				16506FDD272DD7B000B99C19 /* MatchTabView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -307,8 +316,10 @@
 				164A769B2727147800BE0201 /* Messages.swift in Sources */,
 				16792BEC272A4C8E00510E32 /* InfoSnippetView.swift in Sources */,
 				16B1C7B7271CB1AF008B34A3 /* HomeView.swift in Sources */,
+				16506FDE272DD7B000B99C19 /* MatchTabView.swift in Sources */,
 				16B1C7C2271CBB38008B34A3 /* LogoView.swift in Sources */,
 				164A76A42727270100BE0201 /* AboutView.swift in Sources */,
+				16506FDC272DD68F00B99C19 /* LearningSessionView.swift in Sources */,
 				16E97E81272499EC0011C351 /* UserManager.swift in Sources */,
 				166B7679271500AA00A42930 /* Course.swift in Sources */,
 				166B76752715008B00A42930 /* PreviewProvider.swift in Sources */,
@@ -318,6 +329,7 @@
 				16B1C7BD271CB852008B34A3 /* RouterView.swift in Sources */,
 				16792BEA272A4B2D00510E32 /* InfoView.swift in Sources */,
 				16506FD6272DC6C700B99C19 /* InfoViewModel.swift in Sources */,
+				16506FDA272DD41000B99C19 /* LearningSessionViewModel.swift in Sources */,
 				167626FF27275B8500B15581 /* AuthenticationView.swift in Sources */,
 				16B1C7B9271CB1CB008B34A3 /* Color.swift in Sources */,
 				16506FD8272DCC0400B99C19 /* String.swift in Sources */,

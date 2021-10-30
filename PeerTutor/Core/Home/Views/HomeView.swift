@@ -68,7 +68,7 @@ extension HomeView {
             
             // learning sessions
             NavigationLink(
-                destination: Text("Learning Sessions"),
+                destination: LearningSessionView(),
                 label: {
                     MenuTabView(color: Color.theme.blue, text: "Your learning\nsessions")
                 })
