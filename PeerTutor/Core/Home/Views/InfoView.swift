@@ -18,7 +18,7 @@ struct InfoView: View {
             VStack(alignment: .leading, spacing: 25) {
                 // content
                 VStack {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 15) {
                         InfoSnippetView(caption: "Username:", info: vm.username)
                         
                         InfoSnippetView(caption: "Email:", info: vm.email)

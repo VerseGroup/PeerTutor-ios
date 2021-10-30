@@ -51,7 +51,7 @@ extension HomeView {
     // welcomes the currentUser
     private var welcomeMessage: some View {
         VStack(alignment: .leading) {
-            Text("Welcome, \(vm.userManager.currentUser?.username ?? "")!")
+            Text("Welcome, \(vm.username)!")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
