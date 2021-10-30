@@ -10,5 +10,5 @@ import Foundation
 class HomeViewModel: ObservableObject {
     var userManager: UserManager = UserManager.instance
     
-   
+    
 }
