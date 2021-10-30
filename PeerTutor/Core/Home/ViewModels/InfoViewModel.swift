@@ -23,6 +23,7 @@ class InfoViewModel: ObservableObject {
         addSubscribers()
     }
     
+    // binds to the currentUser to display info
     func addSubscribers() {
         userManager.$currentUser
             .map { currentUser -> (username: String, email: String, grade: String, comfortableGrades: String, frees: String) in
