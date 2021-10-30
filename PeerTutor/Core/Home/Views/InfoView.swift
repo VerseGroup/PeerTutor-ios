@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InfoView: View {
-    @ObservedObject private var vm = HomeViewModel()
+    @ObservedObject private var vm = InfoViewModel()
     
     var body: some View {
         ZStack {
@@ -19,20 +19,20 @@ struct InfoView: View {
                 // content
                 VStack {
                     VStack(alignment: .leading) {
-                        InfoSnippetView(caption: "Username:", info: vm.userManager.currentUser?.username)
+                        InfoSnippetView(caption: "Username:", info: vm.username)
                         
-                        InfoSnippetView(caption: "Email:", info: vm.userManager.currentUser?.email)
+                        InfoSnippetView(caption: "Email:", info: vm.email)
                         
-                        InfoSnippetView(caption: "Grade:", info: "\(vm.userManager.currentUser?.grade ?? 0)")
+                        InfoSnippetView(caption: "Grade:", info: vm.grade)
                         
-                        InfoSnippetView(caption: "Comfortable Grade Levels:", info: vm.userManager.currentUser?.teachableGrades.map{String.init($0)}.joined(separator: ", "))
+                        InfoSnippetView(caption: "Comfortable Grade Levels:", info: vm.comfortableGrades)
                         
-                        InfoSnippetView(caption: "Free Periods:", info: vm.userManager.currentUser?.frees.map{$0.rawValue}.joined(separator: ", "))
+                        InfoSnippetView(caption: "Free Periods:", info: vm.frees, frees: true)
                     }
                     
                     Spacer()
                     Button(action: {
-                        vm.userManager.logoutUser()
+                        vm.logoutUser()
                     }, label: {
                         ButtonView(color: Color.infoTheme.background, text: "Sign Out")
                     })

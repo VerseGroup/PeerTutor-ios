@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+
+// TO DO:
+/*
+ - Authentication
+  - Finish Register Page
+ - Implement other Home Views
+ */
+
 struct HomeView: View {
     @StateObject private var vm = HomeViewModel()
     

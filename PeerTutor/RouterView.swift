@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// handles routing the home view and the authentication view
 struct RouterView: View {
     private var userManager = UserManager.instance
     @StateObject private var vm = RouterViewModel()

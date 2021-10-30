@@ -10,6 +10,7 @@ import SwiftUI
 struct InfoSnippetView: View {
     var caption: String
     var info: String?
+    var frees: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -17,7 +18,7 @@ struct InfoSnippetView: View {
                 .font(.headline)
                 .foregroundColor(Color.theme.secondaryText)
             Text(info ?? "")
-                .font(.title)
+                .font(frees ? .headline : .title)
                 .fontWeight(.bold)
                 .foregroundColor(Color.theme.text)
         }

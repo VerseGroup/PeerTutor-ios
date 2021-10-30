@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// handles when to show the home view and authentication view, depends on UserManager
 class RouterViewModel: ObservableObject {
     @Published var showHomeView = false
     var cancellables = Set<AnyCancellable>()

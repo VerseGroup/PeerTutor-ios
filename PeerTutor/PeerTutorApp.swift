@@ -8,14 +8,12 @@
 import SwiftUI
 
 @main
+
+// removed homeVM, i dont think it's needed...
 struct PeerTutorApp: App {
-    
-    @StateObject private var vm = HomeViewModel()
-    
     var body: some Scene {
         WindowGroup {
             RouterView()
-                .environmentObject(vm)
         }
     }
 }
