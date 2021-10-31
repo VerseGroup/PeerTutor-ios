@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CourseInfoView: View {
     
-    var match: Match
+    // needs to be foreground color of theme
+    var color: Color
     var course: Course
     
     var body: some View {
@@ -27,9 +28,7 @@ struct CourseInfoView: View {
             .frame(maxWidth: UIScreen.main.bounds.width, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 10)
-                    // if the tutee is the currentUser (if currentUser is the learner), make color the learning session color
-                    // force unwrapped currentUser, which is bad and not safe, but why not lol
-                    .foregroundColor(match.tutee.id == UserManager.instance.currentUser!.id ? Color.learningSessionTheme.foreground : Color.teachingSessionTheme.foreground)
+                    .foregroundColor(color)
                     .shadow(color: Color.theme.secondaryText.opacity(0.2), radius: 5, y: 5)
             )
         }
@@ -41,6 +40,6 @@ struct CourseInfoView: View {
 
 struct CourseInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseInfoView(match: dev.match1, course: dev.course1)
+        CourseInfoView(color: Color.learningSessionTheme.foreground, course: dev.course1)
     }
 }

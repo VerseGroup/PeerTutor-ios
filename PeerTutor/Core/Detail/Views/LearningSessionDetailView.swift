@@ -42,7 +42,7 @@ struct LearningSessionDetailView: View {
                                 title: { Text("Course Info") },
                                 icon: { Image(systemName: "text.book.closed.fill") }
                             )
-                            CourseInfoView(match: vm.match, course: vm.course)
+                            CourseInfoView(color: Color.learningSessionTheme.foreground, course: vm.course)
                         }
                         
                         VStack(alignment: .leading) {

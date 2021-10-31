@@ -34,17 +34,17 @@ class TeachingSessionViewModel: ObservableObject {
         userManager.$teachingMatches
             // fixes issue with first element being empty
             .dropFirst()
-            .map { matches -> (matches: [Match], loading: Bool) in
+            .map { matches -> [Match] in
                 if let matches = matches {
-                    return (matches.matches, false)
+                    return matches.matches
                 } else {
-                    return ([], false)
+                    return []
                 }
             }
-            .sink { [weak self] returnedData in
-                self?.matches = returnedData.matches
-                print(returnedData)
-                self?.isLoading = returnedData.loading
+            .sink { [weak self] returnedMatches in
+                self?.matches = returnedMatches
+                print(returnedMatches)
+                self?.isLoading = false
             }
             .store(in: &cancellables)
     }

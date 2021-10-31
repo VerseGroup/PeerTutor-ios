@@ -92,7 +92,7 @@ extension HomeView {
             
             // learning requests
             NavigationLink(
-                destination: Text("Learning Requests"),
+                destination: LearningRequestView(),
                 label: {
                     MenuTabView(color: Color.theme.red, text: "Your learning\nrequests")
                 })
