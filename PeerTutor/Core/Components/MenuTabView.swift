@@ -17,6 +17,7 @@ struct MenuTabView: View {
             HStack {
                 Text(text)
                     .fontWeight(.bold)
+                    .fixedSize(horizontal: false, vertical: true)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .font(Font.title.weight(.medium))
