@@ -16,7 +16,6 @@ struct PeriodRowView: View {
         Text(period.description)
             .font(.headline)
             .padding()
-            .frame(width: 100, height: 75)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(color)

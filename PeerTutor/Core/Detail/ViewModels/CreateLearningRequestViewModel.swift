@@ -17,7 +17,7 @@ class CreateLearningRequestViewModel: ObservableObject {
     
     @Published var requestSuccess: Bool = false
     
-    @Published var foundMatch: Bool = true
+    @Published var foundMatch: Bool = false
     
     var cancellables = Set<AnyCancellable>()
     
