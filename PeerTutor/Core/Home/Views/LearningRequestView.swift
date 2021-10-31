@@ -12,6 +12,7 @@ struct LearningRequestView: View {
     @StateObject var vm = LearningRequestViewModel()
     @State private var selectedMatchRequest: MatchRequest? = nil
     @State private var showDetailView: Bool = false
+    @State private var showCreateView: Bool = false
     
     var body: some View {
         ZStack {
@@ -27,12 +28,23 @@ struct LearningRequestView: View {
                 } else {
                     ScrollView {
                         VStack(alignment: .leading) {
+                            // make learning request
+                            Label(
+                                title: { Text("Make a Learning Request") },
+                                icon: { Image(systemName: "plus.circle") }
+                            )
+                            Button(action: {
+                                showCreateView.toggle()
+                            }, label: {
+                                RequestButtonView(relationship: false)
+                            })
+                            
                             // see existing learning requests
                             Label(
                                 title: { Text("Pending Requests") },
                                 icon: { Image(systemName: "clock.arrow.circlepath") }
                             )
-                            VStack(spacing: 25) {
+                            VStack(spacing: 10) {
                                 ForEach(vm.matchRequests) { matchRequest in
                                     MatchRequestTabView(matchRequest: matchRequest)
                                         .onTapGesture {
@@ -40,28 +52,29 @@ struct LearningRequestView: View {
                                         }
                                 }
                             }
-                            
-                            // make learning request
-                            Label(
-                                title: { Text("Make a Learning Request") },
-                                icon: { Image(systemName: "plus.circle") }
-                            )
-                            Button(action: {
-                                
-                            }, label: {
-                                RequestButtonView(relationship: false)
-                            })
                         }
                     }
                 }
             }
             .padding()
+            .onAppear(perform: {
+                // refreshes every time view come backs again
+                vm.getMatchRequests()
+            })
             .background(
-                NavigationLink(
-                    destination: LearningRequestLoadingView(matchRequest: $selectedMatchRequest),
-                    isActive: $showDetailView,
-                    label: { EmptyView() }
-                )
+                Group {
+                    NavigationLink(
+                        destination: LearningRequestLoadingView(matchRequest: $selectedMatchRequest),
+                        isActive: $showDetailView,
+                        label: { EmptyView() }
+                    )
+                    
+                    NavigationLink(
+                        destination: CreateLearningRequestView(),
+                        isActive: $showCreateView,
+                        label: { EmptyView() }
+                    )
+                }
             )
         }
         .navigationTitle("Learning requests")

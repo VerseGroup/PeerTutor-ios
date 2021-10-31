@@ -44,6 +44,10 @@ class UserManager: ObservableObject {
     
     @Published var alertMessage: String = ""
     
+    @Published var requestStatus: Bool = false
+    
+    @Published var foundMatch: Bool = false
+    
     // loads user if user exists
     func loadCurrentUser() {
         guard
@@ -194,8 +198,15 @@ class UserManager: ObservableObject {
             .sink(receiveCompletion: completionHandler) { JSONMessage in
                 if JSONMessage.match_found {
                     self.message = "Match found!"
+                    self.foundMatch = true
                 } else {
                     self.message = "Match not found yet..."
+                    self.foundMatch = false
+                }
+                print("successful request")
+                self.requestStatus = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    self.foundMatch = false
                 }
             }
             .store(in: &cancellables)

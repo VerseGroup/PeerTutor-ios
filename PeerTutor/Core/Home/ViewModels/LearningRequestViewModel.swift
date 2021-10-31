@@ -21,7 +21,7 @@ class LearningRequestViewModel: ObservableObject {
         addSubscribers()
     }
     
-    private func getMatchRequests() {
+    func getMatchRequests() {
         if let user = userManager.currentUser {
             userManager.findMatchRequestByTutee(user: user)
         }

@@ -35,6 +35,8 @@
 		16506FFB272E28A000B99C19 /* RequestButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FFA272E28A000B99C19 /* RequestButtonView.swift */; };
 		16506FFD272E2C1F00B99C19 /* LearningRequestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FFC272E2C1F00B99C19 /* LearningRequestDetailView.swift */; };
 		16506FFF272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FFE272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift */; };
+		16507005272E362000B99C19 /* CreateLearningRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507004272E362000B99C19 /* CreateLearningRequestView.swift */; };
+		16507007272E36CD00B99C19 /* CreateLearningRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507006272E36CD00B99C19 /* CreateLearningRequestViewModel.swift */; };
 		16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16561354271F047D004BFAEC /* AuthenticationViewModel.swift */; };
 		166B76752715008B00A42930 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76742715008B00A42930 /* PreviewProvider.swift */; };
 		166B76772715009A00A42930 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76762715009A00A42930 /* User.swift */; };
@@ -86,6 +88,8 @@
 		16506FFA272E28A000B99C19 /* RequestButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestButtonView.swift; sourceTree = "<group>"; };
 		16506FFC272E2C1F00B99C19 /* LearningRequestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRequestDetailView.swift; sourceTree = "<group>"; };
 		16506FFE272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRequestDetailViewModel.swift; sourceTree = "<group>"; };
+		16507004272E362000B99C19 /* CreateLearningRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLearningRequestView.swift; sourceTree = "<group>"; };
+		16507006272E36CD00B99C19 /* CreateLearningRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLearningRequestViewModel.swift; sourceTree = "<group>"; };
 		16561354271F047D004BFAEC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		166B76742715008B00A42930 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		166B76762715009A00A42930 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				16506FE1272DF92000B99C19 /* LearningSessionDetailViewModel.swift */,
 				16506FF0272E025800B99C19 /* TeachingSessionDetailViewModel.swift */,
 				16506FFE272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift */,
+				16507006272E36CD00B99C19 /* CreateLearningRequestViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				16506FDF272DF80100B99C19 /* LearningSessionDetailView.swift */,
 				16506FF2272E034F00B99C19 /* TeachingSessionDetailView.swift */,
 				16506FFC272E2C1F00B99C19 /* LearningRequestDetailView.swift */,
+				16507004272E362000B99C19 /* CreateLearningRequestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,9 +405,11 @@
 				16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */,
 				166B76772715009A00A42930 /* User.swift in Sources */,
 				16506FEF272E010100B99C19 /* TeachingSessionViewModel.swift in Sources */,
+				16507005272E362000B99C19 /* CreateLearningRequestView.swift in Sources */,
 				16506FE2272DF92000B99C19 /* LearningSessionDetailViewModel.swift in Sources */,
 				16506FFD272E2C1F00B99C19 /* LearningRequestDetailView.swift in Sources */,
 				16B1C7BF271CB884008B34A3 /* HomeViewModel.swift in Sources */,
+				16507007272E36CD00B99C19 /* CreateLearningRequestViewModel.swift in Sources */,
 				16B1C7BD271CB852008B34A3 /* RouterView.swift in Sources */,
 				16792BEA272A4B2D00510E32 /* InfoView.swift in Sources */,
 				16506FE9272DFE5800B99C19 /* UserInfoView.swift in Sources */,

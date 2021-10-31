@@ -31,7 +31,6 @@ struct MatchRequestTabView: View {
                     .shadow(color: Color.theme.secondaryText.opacity(0.2), radius: 5, y: 5)
             )
         }
-        .frame(height: 100)
         .foregroundColor(Color.theme.text)
         .font(.title)
     }
@@ -40,5 +39,6 @@ struct MatchRequestTabView: View {
 struct MatchRequestTabView_Previews: PreviewProvider {
     static var previews: some View {
         MatchRequestTabView(matchRequest: dev.matchRequest1)
+            .previewLayout(.sizeThatFits)
     }
 }
