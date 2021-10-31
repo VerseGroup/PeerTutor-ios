@@ -43,6 +43,8 @@
 		1650700F272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1650700E272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift */; };
 		16507011272E4B4700B99C19 /* TeachingRequestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507010272E4B4700B99C19 /* TeachingRequestDetailView.swift */; };
 		16507013272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507012272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift */; };
+		16507015272E520A00B99C19 /* PeriodRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507014272E520A00B99C19 /* PeriodRowView.swift */; };
+		16507017272EE3C200B99C19 /* GradeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507016272EE3C200B99C19 /* GradeRowView.swift */; };
 		16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16561354271F047D004BFAEC /* AuthenticationViewModel.swift */; };
 		166B76752715008B00A42930 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76742715008B00A42930 /* PreviewProvider.swift */; };
 		166B76772715009A00A42930 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76762715009A00A42930 /* User.swift */; };
@@ -102,6 +104,8 @@
 		1650700E272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeachingRequestViewModel.swift; sourceTree = "<group>"; };
 		16507010272E4B4700B99C19 /* TeachingRequestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingRequestDetailView.swift; sourceTree = "<group>"; };
 		16507012272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingRequestDetailViewModel.swift; sourceTree = "<group>"; };
+		16507014272E520A00B99C19 /* PeriodRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodRowView.swift; sourceTree = "<group>"; };
+		16507016272EE3C200B99C19 /* GradeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeRowView.swift; sourceTree = "<group>"; };
 		16561354271F047D004BFAEC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		166B76742715008B00A42930 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		166B76762715009A00A42930 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				167626FE27275B8500B15581 /* AuthenticationView.swift */,
+				16507016272EE3C200B99C19 /* GradeRowView.swift */,
+				16507014272E520A00B99C19 /* PeriodRowView.swift */,
 				16C6E5B7271EF871009A4F05 /* WelcomeView.swift */,
 			);
 			path = Views;
@@ -410,6 +416,7 @@
 				164A769B2727147800BE0201 /* Messages.swift in Sources */,
 				16792BEC272A4C8E00510E32 /* InfoSnippetView.swift in Sources */,
 				16B1C7B7271CB1AF008B34A3 /* HomeView.swift in Sources */,
+				16507017272EE3C200B99C19 /* GradeRowView.swift in Sources */,
 				16506FF3272E034F00B99C19 /* TeachingSessionDetailView.swift in Sources */,
 				16506FDE272DD7B000B99C19 /* MatchTabView.swift in Sources */,
 				16B1C7C2271CBB38008B34A3 /* LogoView.swift in Sources */,
@@ -441,6 +448,7 @@
 				16B1C7B9271CB1CB008B34A3 /* Color.swift in Sources */,
 				16506FF9272E272D00B99C19 /* MatchRequestTabView.swift in Sources */,
 				16506FD8272DCC0400B99C19 /* String.swift in Sources */,
+				16507015272E520A00B99C19 /* PeriodRowView.swift in Sources */,
 				164A769D2727170E00BE0201 /* APIManager.swift in Sources */,
 				16223FAE2710D35F004D27D3 /* PeerTutorApp.swift in Sources */,
 				16507013272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift in Sources */,

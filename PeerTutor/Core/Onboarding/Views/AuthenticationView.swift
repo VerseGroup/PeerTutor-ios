@@ -108,54 +108,92 @@ extension AuthenticationView {
     
     private var signUpView: some View {
         ScrollView {
-            VStack {
-                LogoView()
-            }
-            .frame(height: 100)
-            .padding()
-            VStack() {
-                VStack(alignment: .leading) {
-                    Text("Username")
-                    TextField("", text: $vm.username)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+            VStack(spacing: 25) {
+                VStack {
+                    LogoView()
                 }
-                
-                VStack(alignment: .leading) {
-                    Text("Email")
-                    TextField("", text: $vm.email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Grade")
-                    Picker("Grade", selection: $vm.gradePicker, content: {
-                        ForEach(0..<vm.grades.count) { grade in
-                            Text("\(vm.grades[grade])")
+                .frame(height: 100)
+                .padding()
+                VStack() {
+                    VStack(alignment: .leading) {
+                        Text("Username")
+                        TextField("", text: $vm.username)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Email")
+                        TextField("", text: $vm.email)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Password")
+                        SecureField("", text: $vm.password)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Grade")
+                        Picker("Grade", selection: $vm.gradePicker, content: {
+                            ForEach(0..<vm.grades.count) { grade in
+                                Text("\(vm.grades[grade])")
+                            }
+                        })
+                        .pickerStyle(SegmentedPickerStyle())
+                    }
+                    
+                    // columns for the grid
+                    let columns: [GridItem] = [
+                        GridItem(.flexible(), spacing: nil, alignment: nil),
+                        GridItem(.flexible(), spacing: nil, alignment: nil),
+                        GridItem(.flexible(), spacing: nil, alignment: nil),
+                    ]
+                    
+                    VStack(alignment: .leading) {
+                        Text("Frees")
+                        LazyVGrid(columns: columns) {
+                            ForEach(0..<vm.allPeriods.count) { periodIndex in
+                                let period = vm.allPeriods[periodIndex]
+                                PeriodRowView(period: period, color: vm.frees.contains(period) ? Color.theme.orange : Color.theme.secondaryBackground)
+                                    .onTapGesture {
+                                        withAnimation(.default.speed(2)) {
+                                            vm.selectPeriod(period: period)
+                                        }
+                                    }
+                            }
                         }
-                    })
-                    .pickerStyle(SegmentedPickerStyle())
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Grade Levels You Want to Teach")
+                        HStack(spacing: -15) {
+                            ForEach(9..<13) { gradeLevel in
+                                GradeRowView(grade: gradeLevel, color: vm.teachableGrades.contains(gradeLevel) ? Color.theme.orange : Color.clear)
+                                    .onTapGesture {
+                                        vm.selectGrade(grade: gradeLevel)
+                                    }
+                            }
+                        }
+                        .background(Color.theme.secondaryBackground.cornerRadius(10))
+                    }
                 }
+                .padding()
+                .padding(.vertical, 25)
                 
-                VStack(alignment: .leading) {
-                    Text("Password")
-                    SecureField("", text: $vm.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
+                Button(action: {
+                    vm.register()
+                }, label: {
+                    ButtonView(color: Color.theme.orange, text: "Sign Up")
+                })
+                Text(vm.alertMessage)
             }
-            .padding()
-            .padding(.vertical, 25)
-            
-            Button(action: {
-                vm.register()
-            }, label: {
-                ButtonView(color: Color.theme.orange, text: "Sign Up")
-            })
-            Spacer()
-            Text(vm.alertMessage)
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
         }
     }
 }

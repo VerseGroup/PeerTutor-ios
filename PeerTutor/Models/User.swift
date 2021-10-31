@@ -22,7 +22,7 @@ struct User: Codable, Identifiable {
 
 extension User: NetworkingJSONDecodable {}
 
-enum Period: String, Codable {
+enum Period: String, Codable, CaseIterable {
     case d1p1, d1p2, d1p3, d1p4, d1p5, d1p6, d1p7
     case d2p1, d2p2, d2p3, d2p4, d2p5, d2p6, d2p7
     case d3p1, d3p2, d3p3, d3p4, d3p5, d3p6, d3p7
