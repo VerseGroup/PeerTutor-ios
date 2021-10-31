@@ -37,6 +37,12 @@
 		16506FFF272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16506FFE272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift */; };
 		16507005272E362000B99C19 /* CreateLearningRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507004272E362000B99C19 /* CreateLearningRequestView.swift */; };
 		16507007272E36CD00B99C19 /* CreateLearningRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507006272E36CD00B99C19 /* CreateLearningRequestViewModel.swift */; };
+		16507009272E49B200B99C19 /* TeachingRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507008272E49B200B99C19 /* TeachingRequestView.swift */; };
+		1650700B272E4A5600B99C19 /* TeachingRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1650700A272E4A5600B99C19 /* TeachingRequestViewModel.swift */; };
+		1650700D272E4A9200B99C19 /* CreateTeachingRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1650700C272E4A9200B99C19 /* CreateTeachingRequestView.swift */; };
+		1650700F272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1650700E272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift */; };
+		16507011272E4B4700B99C19 /* TeachingRequestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507010272E4B4700B99C19 /* TeachingRequestDetailView.swift */; };
+		16507013272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16507012272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift */; };
 		16561355271F047D004BFAEC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16561354271F047D004BFAEC /* AuthenticationViewModel.swift */; };
 		166B76752715008B00A42930 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76742715008B00A42930 /* PreviewProvider.swift */; };
 		166B76772715009A00A42930 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B76762715009A00A42930 /* User.swift */; };
@@ -90,6 +96,12 @@
 		16506FFE272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRequestDetailViewModel.swift; sourceTree = "<group>"; };
 		16507004272E362000B99C19 /* CreateLearningRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLearningRequestView.swift; sourceTree = "<group>"; };
 		16507006272E36CD00B99C19 /* CreateLearningRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLearningRequestViewModel.swift; sourceTree = "<group>"; };
+		16507008272E49B200B99C19 /* TeachingRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingRequestView.swift; sourceTree = "<group>"; };
+		1650700A272E4A5600B99C19 /* TeachingRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingRequestViewModel.swift; sourceTree = "<group>"; };
+		1650700C272E4A9200B99C19 /* CreateTeachingRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeachingRequestView.swift; sourceTree = "<group>"; };
+		1650700E272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeachingRequestViewModel.swift; sourceTree = "<group>"; };
+		16507010272E4B4700B99C19 /* TeachingRequestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingRequestDetailView.swift; sourceTree = "<group>"; };
+		16507012272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingRequestDetailViewModel.swift; sourceTree = "<group>"; };
 		16561354271F047D004BFAEC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		166B76742715008B00A42930 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		166B76762715009A00A42930 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -236,6 +248,8 @@
 				16506FF0272E025800B99C19 /* TeachingSessionDetailViewModel.swift */,
 				16506FFE272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift */,
 				16507006272E36CD00B99C19 /* CreateLearningRequestViewModel.swift */,
+				1650700E272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift */,
+				16507012272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -247,6 +261,8 @@
 				16506FF2272E034F00B99C19 /* TeachingSessionDetailView.swift */,
 				16506FFC272E2C1F00B99C19 /* LearningRequestDetailView.swift */,
 				16507004272E362000B99C19 /* CreateLearningRequestView.swift */,
+				1650700C272E4A9200B99C19 /* CreateTeachingRequestView.swift */,
+				16507010272E4B4700B99C19 /* TeachingRequestDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +286,7 @@
 				16506FDB272DD68F00B99C19 /* LearningSessionView.swift */,
 				16506FEC272E00C100B99C19 /* TeachingSessionView.swift */,
 				16506FF6272E210100B99C19 /* LearningRequestView.swift */,
+				16507008272E49B200B99C19 /* TeachingRequestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +299,7 @@
 				16506FD9272DD41000B99C19 /* LearningSessionViewModel.swift */,
 				16506FEE272E010100B99C19 /* TeachingSessionViewModel.swift */,
 				16506FF4272E200A00B99C19 /* LearningRequestViewModel.swift */,
+				1650700A272E4A5600B99C19 /* TeachingRequestViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -387,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16507011272E4B4700B99C19 /* TeachingRequestDetailView.swift in Sources */,
 				166B76922715226800A42930 /* MatchRequest.swift in Sources */,
 				164A769B2727147800BE0201 /* Messages.swift in Sources */,
 				16792BEC272A4C8E00510E32 /* InfoSnippetView.swift in Sources */,
@@ -398,6 +417,7 @@
 				16506FDC272DD68F00B99C19 /* LearningSessionView.swift in Sources */,
 				16E97E81272499EC0011C351 /* UserManager.swift in Sources */,
 				166B7679271500AA00A42930 /* Course.swift in Sources */,
+				16507009272E49B200B99C19 /* TeachingRequestView.swift in Sources */,
 				166B76752715008B00A42930 /* PreviewProvider.swift in Sources */,
 				16506FE0272DF80100B99C19 /* LearningSessionDetailView.swift in Sources */,
 				16506FED272E00C100B99C19 /* TeachingSessionView.swift in Sources */,
@@ -412,6 +432,7 @@
 				16507007272E36CD00B99C19 /* CreateLearningRequestViewModel.swift in Sources */,
 				16B1C7BD271CB852008B34A3 /* RouterView.swift in Sources */,
 				16792BEA272A4B2D00510E32 /* InfoView.swift in Sources */,
+				1650700B272E4A5600B99C19 /* TeachingRequestViewModel.swift in Sources */,
 				16506FE9272DFE5800B99C19 /* UserInfoView.swift in Sources */,
 				16506FD6272DC6C700B99C19 /* InfoViewModel.swift in Sources */,
 				16506FDA272DD41000B99C19 /* LearningSessionViewModel.swift in Sources */,
@@ -422,9 +443,12 @@
 				16506FD8272DCC0400B99C19 /* String.swift in Sources */,
 				164A769D2727170E00BE0201 /* APIManager.swift in Sources */,
 				16223FAE2710D35F004D27D3 /* PeerTutorApp.swift in Sources */,
+				16507013272E4B9900B99C19 /* TeachingRequestDetailViewModel.swift in Sources */,
+				1650700D272E4A9200B99C19 /* CreateTeachingRequestView.swift in Sources */,
 				16506FFB272E28A000B99C19 /* RequestButtonView.swift in Sources */,
 				16506FEB272DFF8B00B99C19 /* ScheduleInfoView.swift in Sources */,
 				16506FFF272E2C3B00B99C19 /* LearningRequestDetailViewModel.swift in Sources */,
+				1650700F272E4ACD00B99C19 /* CreateTeachingRequestViewModel.swift in Sources */,
 				16506FF5272E200A00B99C19 /* LearningRequestViewModel.swift in Sources */,
 				16B1C7C4271CC01E008B34A3 /* MenuTabView.swift in Sources */,
 				164B3650272A43CB000CC561 /* RouterViewModel.swift in Sources */,

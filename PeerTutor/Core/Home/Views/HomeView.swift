@@ -99,7 +99,7 @@ extension HomeView {
             
             // teaching requests
             NavigationLink(
-                destination: Text("Teaching Requests"),
+                destination: TeachingRequestView(),
                 label: {
                     MenuTabView(color: Color.theme.yellow, text: "Your teaching\nrequests")
                 })
