@@ -22,10 +22,10 @@ struct LearningRequestView: View {
             // content
             VStack(alignment: .leading, spacing: 25) {
                 // content
-                if vm.isLoading {
-                    Text("Loading data...")
-                        .font(.largeTitle)
-                } else {
+//                if vm.isLoading {
+//                    Text("Loading data...")
+//                        .font(.largeTitle)
+//                } else {
                     ScrollView {
                         VStack(alignment: .leading) {
                             // make learning request
@@ -54,7 +54,7 @@ struct LearningRequestView: View {
                             }
                         }
                     }
-                }
+//                }
             }
             .padding()
             .onAppear(perform: {

@@ -12,7 +12,7 @@ class TeachingRequestViewModel: ObservableObject {
     var userManager: UserManager = UserManager.instance
     
     @Published var matchRequests: [MatchRequest] = []
-    @Published var isLoading: Bool = false // set false for testing
+    @Published var isLoading: Bool = true // set false for testing
     
     var cancellables = Set<AnyCancellable>()
     

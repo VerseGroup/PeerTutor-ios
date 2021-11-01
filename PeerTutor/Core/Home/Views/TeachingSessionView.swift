@@ -20,10 +20,10 @@ struct TeachingSessionView: View {
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 25) {
                 // content
-                if vm.isLoading {
-                    Text("Loading data...")
-                        .font(.largeTitle)
-                } else {
+//                if vm.isLoading {
+//                    Text("Loading data...")
+//                        .font(.largeTitle)
+//                } else {
                     if vm.matches.count == 0 {
                         Text("No teaching sessions found, go and make some in Teaching Requests!")
                             .font(.largeTitle)
@@ -41,7 +41,7 @@ struct TeachingSessionView: View {
                             .padding(.top)
                         }
                     }
-                }
+//                }
             }
             .padding()
             .background(
