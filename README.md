@@ -1,6 +1,6 @@
 # PeerTutor
 
-PeerTutor is the first full app launched by PSM. PeerTutor enables students to learn from and teach their classmates. 
+PeerTutor is the first full app launched by Verse. PeerTutor enables students to learn from and teach their classmates. 
 
 # iOS App
 The iOS app is made with SwiftUI and Combine, the newest and greatest Apple frameworks. 
