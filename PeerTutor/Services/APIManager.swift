@@ -13,7 +13,7 @@ import Networking
 // Handles downloading and posting all the data from the API
 struct APIManager: NetworkingService {
     
-    let network = NetworkingClient(baseURL: "https://hackleypeertutor.herokuapp.com/api")
+    let network = NetworkingClient(baseURL: "https://urchin-app-zppcb.ondigitalocean.app/api")
     
     // gets user info
     func getUser(id: Int) -> AnyPublisher<User, Error> {
